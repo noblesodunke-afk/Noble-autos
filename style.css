@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    background: #000;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================================
+   NOBLE AUTOS HERO
+========================================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    background: #000;
+}
+
+/* =========================================
+   SLIDESHOW VIDEO
+========================================= */
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translate(-50%, -50%) scale(1.04);
+
+    object-fit: cover;
+    object-position: center;
+
+    filter: blur(3px);
+
+    z-index: 1;
+}
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.55)
+        );
+
+    z-index: 2;
+}
+
+/* =========================================
+   CENTER CONTENT
+========================================= */
+
+.hero-text {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 90%;
+    max-width: 1100px;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    z-index: 3;
+}
+
+/* =========================================
+   NOBLE AUTOS TITLE
+========================================= */
+
+.hero-text h1 {
+    margin: 0;
+
+    font-size: clamp(42px, 8vw, 105px);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: clamp(5px, 1.2vw, 14px);
+
+    text-transform: uppercase;
+
+    color: #fff;
+
+    animation: nobleAutosColor 6s ease-in-out infinite alternate;
+
+    text-shadow:
+        0 2px 15px rgba(0, 0, 0, 0.7),
+        0 0 35px rgba(255, 255, 255, 0.12);
+}
+
+/* =========================================
+   TITLE COLOUR CHANGE
+========================================= */
+
+@keyframes nobleAutosColor {
+
+    0% {
+        color: #ffffff;
+    }
+
+    50% {
+        color: #d4af37;
+    }
+
+    100% {
+        color: #8b0000;
+    }
+}
+
+/* =========================================
+   HTML MARQUEE
+========================================= */
+
+.hero-text marquee {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 18px;
+
+    font-size: 9px;
+
+    line-height: 15px;
+
+    letter-spacing: 3px;
+
+    font-weight: 400;
+
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    white-space: nowrap;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero-video {
+        transform: translate(-50%, -50%) scale(1.07);
+
+        filter: blur(2.5px);
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.6)
+            );
+    }
+
+    .hero-text {
+        width: 92%;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(38px, 11vw, 70px);
+
+        letter-spacing: 6px;
+    }
+
+    .hero-text marquee {
+        margin-top: 14px;
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+}
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .hero-text h1 {
+        font-size: 38px;
+        letter-spacing: 5px;
+    }
+
+    .hero-text marquee {
+        font-size: 7px;
+        letter-spacing: 1.5px;
+    }
+}

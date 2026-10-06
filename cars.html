@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Noble Autos | Collection</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #050505;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 70px 20px 40px;
+        }
+
+        header h1 {
+            font-size: clamp(35px, 7vw, 75px);
+            letter-spacing: 10px;
+            font-weight: 600;
+        }
+
+        header p {
+            margin-top: 12px;
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: #aaa;
+            text-transform: uppercase;
+        }
+
+        .gallery {
+            width: 90%;
+            max-width: 1400px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+
+            padding-bottom: 70px;
+        }
+
+        .car {
+            position: relative;
+            height: 360px;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .car img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+
+            transition: transform 0.6s ease;
+        }
+
+        .car:hover img {
+            transform: scale(1.06);
+        }
+
+        .car-info {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            padding: 25px 20px;
+
+            background: linear-gradient(
+                transparent,
+                rgba(0, 0, 0, 0.9)
+            );
+        }
+
+        .car-info h2 {
+            font-size: 17px;
+            letter-spacing: 3px;
+        }
+
+        .car-info p {
+            margin-top: 6px;
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: #bbb;
+        }
+
+        @media (max-width: 800px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .car {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .gallery {
+                grid-template-columns: 1fr;
+                width: 94%;
+            }
+
+            .car {
+                height: 330px;
+            }
+
+            header h1 {
+                letter-spacing: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>NOBLE AUTOS</h1>
+        <p>The Collection</p>
+    </header>
+
+    <main class="gallery">
+
+        <div class="car">
+            <img src="supercar 1.jpeg" alt="Noble Autos">
+            <div class="car-info">
+                <h2>01) Lamborghini Sián FKP 37</h2>
+                <p>Lamborghini Sián FKP 37
+A futuristic V12 masterpiece blending extreme performance, sculpted aerodynamics, and unmistakable Italian design.</p>
+            </div>
+        </div>
+
+        <div class="car">
+            <img src="supercar2.jpeg" alt="Noble Autos">
+            <div class="car-info">
+                <h2>02)Lamborghini Aventador </h2>
+                <p>Lamborghini Aventador
+An iconic V12 supercar defined by dramatic styling, raw power, and an aggressive road presence.</p>
+            </div>
+        </div>
+
+        <div class="car">
+            <img src="supercar3.jpeg" alt="Noble Autos">
+            <div class="car-info">
+                <h2>03) Bugatti Chiron</h2>
+                <p>Bugatti Chiron
+A pinnacle of automotive engineering, combining immense performance with exceptional craftsmanship and refined luxury.</p>
+            </div>
+        </div>
+
+        <div class="car">
+            <img src="supercar4.jpeg" alt="Noble Autos">
+            <div class="car-info">
+                <h2>04) Ferrari 488 GTB</h2>
+                <p>Ferrari 488 GTB
+A precision-built Italian supercar delivering exhilarating performance, elegant proportions, and racing-inspired character.</p>
+            </div>
+        </div>
+
+        <div class="car">
+            <img src="supercar5.jpeg" alt="Noble Autos">
+            <div class="car-info">
+                <h2>05) Lamborghini Revuelto</h2>
+                <p>Lamborghini Revuelto
+A new-generation V12 supercar combining electrified performance, advanced aerodynamics, and Lamborghini's signature design language.</p>
+            </div>
+        </div>
+
+        <div class="car">
+            <img src="supercar6.jpeg" alt="Noble Autos">
+            <div class="car-info">
+                <h2>06) McLaren 720S</h2>
+                <p>McLaren 720S
+A lightweight performance machine engineered around aerodynamic efficiency, precision handling, and extraordinary acceleration.</p>
+            </div>
+        </div>
+<!-- 07 -->
+<div class="car">
+    <img src="supercar7.jpeg" alt="Pagani Huayra Pearl">
+
+    <div class="car-info">
+        <span class="number">07</span>
+
+        <h2>PAGANI HUAYRA PEARL</h2>
+
+        <p>
+            An extraordinary expression of Italian craftsmanship,
+            combining bespoke detailing, sculpted aerodynamics,
+            and exceptional performance.
+        </p>
+    </div>
+</div>
+
+
+<!-- 08 -->
+<div class="car">
+    <img src="supercar8.jpeg" alt="Koenigsegg Jesko">
+
+    <div class="car-info">
+        <span class="number">08</span>
+
+        <h2>KOENIGSEGG JESKO</h2>
+
+        <p>
+            A cutting-edge hypercar engineered around extreme power,
+            advanced aerodynamics, and uncompromising speed.
+        </p>
+    </div>
+</div>
+
+
+<!-- 09 -->
+<div class="car">
+    <img src="supercar9.jpeg" alt="Aston Martin Valkyrie">
+
+    <div class="car-info">
+        <span class="number">09</span>
+
+        <h2>ASTON MARTIN VALKYRIE</h2>
+
+        <p>
+            A road-legal hypercar inspired by Formula 1 engineering,
+            combining radical aerodynamics, lightweight construction,
+            and an intense V12 character.
+        </p>
+    </div>
+</div>
+    </main>
+
+</body>
+</html>
